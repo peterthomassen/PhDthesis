@@ -1,0 +1,155 @@
+\documentclass[11pt]{ruthesis}
+
+
+% The page number in Rutgers thesis format is so high up in the
+% page that normal printers can not print it out! The following is to
+% lower page numbers down a bit, so we can see them in a draft
+% version to the committee members. Do NOT use this change in the
+% FINAL version to be submitted to the Graduate School.
+%\addtolength{\topmargin}{0.3cm}
+
+
+\usepackage{float}
+\usepackage{rotating}
+\usepackage[pdftex,bookmarks=true,bookmarksopenlevel=1]{hyperref}
+\usepackage{hyperref}
+\usepackage{comment} 
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage{slashed}
+\usepackage{lmodern}
+\usepackage{mathrsfs}
+\usepackage{nextpage}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{savesym}
+\usepackage{braket}
+\usepackage{subcaption}
+\usepackage{units}
+
+\newcommand{\equates}{\mathrel{\widehat{=}}}
+\providecommand{\fixme}[1]{{\sffamily{\bfseries{}FIXME:} #1}}
+\newcommand{\ptRatio}{\ensuremath{\pt^\text{ratio}}\xspace}
+\newcommand{\ptRel}{\ensuremath{\pt^\text{rel}}\xspace}
+\newcommand{\relIso}{\ensuremath{I_\text{rel}}\xspace}
+\newcommand{\miniIso}{\ensuremath{I_\text{mini}}\xspace}
+\newcommand{\multiIso}{\ensuremath{I_\text{multi}}\xspace}
+
+\pdfpkresolution=2400 % needed for \dlsh and \drsh
+
+\special{papersize=8.5in,11in} %***for A4-default configurations on servers
+
+% Include defined symbols
+\input{pennames-pazo.sty}
+\input{ptdr-definitions.sty}
+\input{user-definitions.sty}
+
+
+% Begin document
+\begin{document}
+
+
+% Begin title page
+
+\phd 
+
+\title{Search for Type-III Seesaw Heavy Fermions with Multilepton Final States using \fullLumi of \boldmath$\sqrt{\lowercase{s}} = 13\,\TeV$ proton--proton Collision Data}
+
+% Your name must exactly match what is on your transcript
+\author{Peter Thomassen}
+
+\program{Physics and Astronomy}
+
+\director{Dr. Sunil Somalwar}
+
+% Physics has five committee members, including your advisor and one member external to the department
+% Side note: your external member must be approved by the GSNB - send the dept. grad director a copy of their CV to do that
+\approvals{5}
+
+% This is the month you will be awarded the degree, so one of January, May, or October
+\submissionmonth{May} 
+
+\submissionyear{2016}
+
+% Begin beforepreface
+
+\copyrightpage % ruthesis.cls boolean to turn copyright on and must be called before \beforepreface is called
+
+% Page ii is the abstract - Must not exceed 2,450 characters and 350 words.
+% The abstract should be relatively jargon-free but still contain any relevant keywords for search engines.
+\abstract{
+A search for type-III seesaw signal in events with three or more electrons or muons is presented. The data sample corresponds to \fullLumi\ of integrated luminosity in $pp$ collisions at $\sqrt{s} = 13\,\TeV$ collected by the CMS experiment at the LHC. Since the signal populates channels with at least three leptons and diverse kinematic properties, the data is binned in exclusive channels. The primary selection is based on the number of leptons and the invariant mass of opposite-sign dilepton systems which helps discriminate the signal against the Standard Model background. The final optimization for the type-III seesaw signal is based on the sum of leptonic transerve momenta and missing transverse energy. Control samples in data are used to check the robustness of background evaluation techniques and to minimize the reliance on simulation. The observations are consistent with expectations from Standard Model processes. The results are used to exclude heavy fermions of the type-III seesaw model with masses below 430\,\GeV.}
+
+
+\beforepreface
+
+
+% Begin afterpreface
+
+\acknowledgements{
+First and foremost, I would like to thank Emmanuel Contreras-Campana for having provided 
+me with this thesis template.
+
+Sunil, Rutgers group, Italians, Würzburg University, DAAD, sdw}
+
+
+%\dedication{
+%\begin{center}
+%\begin{flushleft}
+%\end{flushleft}
+%\em{
+%I dedicate this dissertation to Emmanuel to whom
+%this thesis would not have been possible.}
+%\end{center}
+%}
+
+
+\tablespage % ruthesis.cls boolean to turn list of tables on and must be called before \afterpreface is called
+\figurespage % ruthesis.cls boolean to turn list of tables on and must be called before \afterpreface is called
+
+\afterpreface
+
+\section*{TODO}
+\begin{itemize}
+	\item dataset and MC sample table
+	\item mention that SM and detector description are taken from Master's Thesis
+\end{itemize}
+
+\input{Introduction/Introduction}
+\input{Theory/Theory}
+\input{Detector/Detector}
+\input{Strategy/Strategy}
+\input{Optimization/Optimization}
+\input{ObjectID/ObjectID}
+\input{EventSelection/EventSelection}
+\input{SignalModel/SignalModel}
+\input{Background/Background}
+\input{Systematics/Systematics}
+\input{Results/Results}
+\input{Interpretation/Interpretation}
+\input{Summary/Summary}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%
+\appendix
+\input{Appendix/Appendix}
+
+\clearpage
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{singlespace}
+\bibliographystyle{ieeetr}
+\bibliography{thesis.bib}
+\end{singlespace}
+
+%%%%%%%%%%%%%%%%%% End of thesis %%%%%%%%%%%%%%%%%%
+%\pagestyle{empty} % Using this removes last page number of the bibliography for unknown reasons
+
+\end{document}

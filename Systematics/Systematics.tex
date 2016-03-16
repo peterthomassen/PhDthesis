@@ -1,0 +1,38 @@
+\chapter{Systematic Uncertainties}
+\label{sec:Systematics}
+Since most of the signal regions are limited by statistics, systematic uncertainties play a minor role. The only regions where the expected background exceeds 10 events are the signal regions with 3 leptons including an OSSF pair on or above-\Z, and $L_\textrm{T} + \MET < 550\,\GeV$. In these regions, the \WZ and \ttbar background uncertainties become relevant. However, channels with higher $L_\textrm{T} + \MET$ are more sensitive to the signal. The full list of uncertainties is found in Table~\ref{tab:Systematics}, along with their impact on a representative set of three of the most sensitive channels.
+
+\begin{table}
+\centering
+\small
+\caption{Systematic uncertainties. The channels listed here have three leptons and $550\,\GeV < L_\textrm{T} + \MET < 750\,\GeV$.} \label{tab:Systematics}
+\begin{tabular}{l c c c c}
+\hline\hline
+ & & \multicolumn{3}{c}{Impact on background/signal estimate in channel with} \\
+Source of uncertainty & Magnitude & no OSSF pair & OSSF pair above-\Z & OSSF pair on-\Z \\
+\hline
+\WZ normalization                & 50\,\%       & 13\,\%  & 2.8\,\% & 38\,\%  \\
+\ZZ normalization                & 16\,\%       & 0.1\,\% & 0.5\,\% & 0.4\,\% \\
+Integrated luminosity            & 2.7\,\%      & 0.6\,\% & 0.2\,\% & 0.3\,\% \\
+Lepton ID and isolation          &  3\,\%       & 3\,\%   & 3\,\%   & 3\,\%   \\
+\MET resolution/smearing         & 50\,\%       & 4.1\,\% & 6.3\,\% & 1.4\,\% \\
+Pile-up reweighting              & 5\,\%        & 1.5\,\% & 0.3\,\% & 1.2\,\% \\
+\ttbar misidentification rate    & 50\,\%       & 21\,\%  & 11\,\%  & 1.4\,\% \\
+\Z + jets background             & 14\,\%       & 9.2\,\% & 1.1\,\% & 0.5\,\% \\
+Rare MC cross section            & 50\,\%       & 11\,\%  & 2.7\,\% & 5.2\,\% \\
+\\
+Signal cross section             & 10\,\%       & 10\,\%  & 10\,\%  & 10\,\% \\
+\\
+\multicolumn{2}{l}{Background (for comparison)} & 0.3 events & 3.0 events & 4.8 events \\
+\multicolumn{2}{l}{Signal ($m_\Sigma = 420\,\GeV$, for comparison)} & 0.8 events & 1.8 events & 1.1 events \\
+\hline
+\end{tabular}
+\end{table}
+
+The \ZZ and \ttbar uncertainties are based on the statistical uncertainties of the normalization regions; cross section uncertainties are thus not applied. The \WZ background is a significant background. We apply a 50\,\% uncertainty for its estimate to account for poor statistics in the regions with high $L_\textrm{T}$, \MET, or $M_\textrm{T}$. For rare background processes, we apply a 50\,\% theory systematic uncertainty to cover both PDF as well as renormalization and factorization scale uncertainties. In the case of the signal, these uncertainties are covered by a 10\,\% systematic uncertainty \cite{CMS-PAS-EXO-14-001}.
+
+For the \MET smearing procedure, a conservative uncertainty is determined by varying the amount of smearing by 50\,\%. Pile-up weights are evaluated by varying the minimum-bias cross section by 5\,\% and propagating the impact on the pile-up weights through the analysis chain.
+
+In general, systematic uncertainties are found by weighing events up or down or smearing them, then propagating those changes into the various bins of the analysis. The change in the expected backgrounds or yields in each bin corresponds to a systematic uncertainty, where we keep track of the relative sign of changes between different bins in order to keep track of correlations and anti-correlations.
+
+%Details on the fake rate uncertainties can be found in Sec.~\ref{sec:backgrounds}.

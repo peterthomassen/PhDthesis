@@ -1,0 +1,74 @@
+\chapter{Selection}
+\label{chap:Selection}
+
+\section{Object Selection}
+\label{sec:Selection/Object}
+
+\subsection{Electrons and Muons}
+Events that pass the trigger are required to satisfy additional selection criteria. Electrons with $\pt \geq 7\,\GeV$ and $|\eta| \leq 2.5$ as well as muons with $\pt \geq 5\,\GeV$ and $|\eta| \leq 2.4$ are reconstructed using the particle-flow (PF) algorithm which utilizes measured quantities from the tracker, calorimeter, and muon system \cite{CMS-PAS-PFT-09-001}. The matching candidate tracks must satisfy quality requirements and spatially match with the energy deposits in the ECAL and the tracks in the muon detectors, as appropriate.
+
+Sources of background leptons include genuine leptons occurring inside or near jets, hadrons that punch through into the muon system and are misidentified as muons, hadronic showers with large electromagnetic fractions, or photon conversions. An isolation requirement -- imposing a selection based on the size of the lepton transverse momentum in comparison to the transverse momenta of other particles in its immediate neighborhood -- strongly reduces the background from misidentified leptons, since most of them occur inside jets.
+
+\fixme{This section is taken verbatim from SUS-15-008 PAS \cite{CMS-PAS-SUS-15-008}.}
+
+The charged leptons produced in decays of heavy particles are typically spatially isolated from the hadronic activity in the event,
+while the leptons produced in the decays of hadrons or misidentified leptons are usually
+embedded in jets. This distinction becomes less evident moving to
+highly boosted systems where decay products tend to overlap.
+%Therefore, in order to discriminate between the signal and background leptons, 
+Therefore, we use the multi-isolation discriminator which is constructed using three variables as input:
+
+\begin{itemize}
+	\item A mini-isolation (\miniIso)~\cite{Rehermann:2010vq} which is computed as a ratio of the scalar sum of transverse momenta of the charged hadrons, neutral hadrons, and photons within a cone of radius $R (\pt^\ell)$ around the lepton candidate direction at the origin, to the transverse momentum of the candidate. The cone radius $R$depends on lepton $\pt$ as 
+		\begin{equation}
+			R(\pt^\ell) = \dfrac{10\GeV}{\min\left[\max\left(\pt^\ell, 50\GeV\right), 200\GeV\right]}.
+		\end{equation}
+		The varying isolation cone definition reduces the inefficiency from accidental overlap between the lepton and jets in a busy event environment.
+	\item A ratio between the lepton $\pt^\ell$ and $\pt^\text{jet}$ of a jet containing the lepton: 
+		\begin{equation}
+			\ptRatio = \dfrac{\pt^\ell}{\pt^\text{jet}}.
+		\end{equation}
+		The \ptRatio variable acts as a relative isolation in a larger cone. It improves mini-isolation performance when there are no nearby jets, expecially for low-$\pt$ leptons. %It helps to estimate level of lepton isolation for low-$\pt$ leptons.
+	\item Transverse momentum of the lepton relative to the residual momentum of the closest jet after lepton momentum subtraction:
+	  \begin{equation}
+		\ptRel=\frac{(\vec{p}(\text{jet})-\vec{p}(\ell))\cdot \vec{p}(\ell) }{|\vec{p}(\text{jet})-\vec{p}(\ell)|}.
+	  \end{equation}
+	The \ptRel variable allows to identify leptons that accidentally overlap with other jets in the event.
+\end{itemize}
+
+A lepton is considered to be isolated if the following condition is met:
+\begin{equation}
+	\miniIso < I_1 \wedge ( \ptRatio > I_2 \vee \ptRel > I_3 )
+\end{equation}
+
+The values of $I_\text{i}$, $i = 1,2,3,$ depend on the lepton flavor. As the chance of misidentification is higher for electrons, tighter isolation values are used in this case (see Table~\ref{tab:isoWPs}). 
+\begin{table}[h]
+\centering
+\caption{Multi-isolation working points used in the analysis.} \label{tab:isoWPs}
+\begin{tabular}{l ccc}
+\hline\hline
+Isolation value & Loose leptons  & Tight muons & Tight electrons  \\
+\hline
+$I_1$ & 0.4 & 0.16 & 0.12 \\
+$I_2$ & 0 & 0.76 & 0.80 \\
+$I_3$ [GeV] & 0 & 7.2 & 7.2 \\
+\hline
+\end{tabular}
+\end{table}
+%----------------------------------------------------------------------------------------------------------------------------
+
+For electrons, the medium working point is employed, while for muons, we use the tight working point. Further details on the input variables, working points, and their efficiencies can be found in \cite{CMS-PAS-SUS-15-008}.
+
+The signal leptons originate from the interaction point. After the isolation selection, the most significant background sources are residual non-prompt leptons from heavy quark decays, where the lepton tends to be more isolated because of the high \pt with respect to the jet axis. This background is reduced by requiring that the leptons satisfy $d_\textrm{z} \leq 0.1\,\cm$ where $d_\textrm{z}$ is the longitudinal impact parameter with respect to the primary interaction vertex, and that the impact parameter $d_\textrm{xy}$ between the track and the event vertex in the plane transverse to the beam axis be small: $d_\textrm{xy} \leq 0.05\,\cm$. The isolation and impact parameter criteria retain signal but significantly reject misidentified leptons.
+
+\subsection{Missing Transverse Momentum (\MET)}
+The missing transverse momentum is calculated as the negative vectorial sum of the transverse momenta of all the PF candidates. The missing transverse energy \MET is defined as the magnitude of this vector. Jet energy corrections are applied to all jets and also propagated to the calculation of \MET \cite{CMS-PAS-JME-12-002}. We apply additional smearing to simulation samples to model the \MET resolutions we find in data as a function of jet activity and the number of interaction vertices in an event.
+
+
+\section{Event Selection}
+\label{sec:Selection}
+
+For the three leading leptons, we apply offline thresholds of 20, 15, 10\,\GeV. We find that with these thresholds, the trigger efficiency of trilepton events is close to 100\%.
+
+Events with an opposite-sign lepton pair with mass below 12 GeV are vetoed to reduce background from low-mass resonances.
+%Furthermore, we reject trilepton events with an OSSF pair below the \Z boson mass window when the trilepton mass is within the \Z mass window. This cuts away background from asymmetric photon conversions in $\Z \to \ell\ell^* \to \ell\ell\gamma$, where the photon converts into two additional leptons, one of which is lost.

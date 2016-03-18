@@ -1,15 +1,15 @@
 \chapter{Backgrounds}
-\label{sec:backgrounds}
+\label{chap:Backgrounds}
 
 To judge the importance of each background, we consider the breakdown in the ten signal regions that are most sensitive to the signal. These signal regions, such as the region with three leptons, an OSSF pair on-\Z, and $L_\textrm{T} + \MET > 550\,\GeV$, lie in the peripheral areas of the multilepton phase space and are thus limited by statistics. The most notable backgrounds are:
 \begin{enumerate}
 	\item $\WZ \to \ell\ell\ell$. This process is responsible for about 51\,\% of the total background in the top ten signal regions (i.\,e. the 10 most sensitive bins of Fig.~\ref{fig:Results}).
 	\item Fully leptonic \ttbar decays with a misidentified lepton from a b-jet, 21\,\% of the total background.
-	\item $\Z \to \ell\ell$ plus a misidentified lepton from a jet. This process makes up about 17\,\% of the total background.
+	\item $\Z \to \ell\ell$ plus a misidentified lepton from a jet or a photon. This process makes up about 17\,\% of the total background.
 	\item $\ZZ \to 4\ell$, 3\,\% of the total background.
 \end{enumerate}
 
-The prompt diboson backgrounds (\WZ and \ZZ) are obtained from simulation, but normalized and validated in data control regions. For processes that contain misidentified leptons (\Z or \ttbar accompanied by a misidentified lepton), misidentification rates are measured in appropriate control regions. The \Z background estimate is fully data-driven using a method that also covers similar, albeit smaller backgrounds like \PW\PW\ + jets. In our figures, this background is labeled ``Misidentified''.
+The prompt diboson backgrounds (\WZ and \ZZ) are obtained from simulation, but normalized and validated in data control regions. For processes that contain misidentified leptons (\Z or \ttbar accompanied by a third lepton), misidentification rates are measured in appropriate control regions. The \Z + fake estimate is fully data-driven using a method that also covers similar, albeit smaller backgrounds like \PW\PW\ + fake. In our figures, this background is labeled ``Misidentified''.
 
 In the case of \ttbar, the process-specific kinematics are harder to capture using a fully data-driven method; we thus extract the kinematics from MC, while the misidentification rate remains data-driven. The remaining 9\,\% of the background are due to rare processes like $\ttbar\Z$, $\ttbar\PW$, and $\PH \to 4\ell$ which we obtain directly from MC simulation. In our figures, these backgrounds are denoted ``Rare MC'' and ``Higgs'', respectively.
 
@@ -23,8 +23,8 @@ Whenever MC simulation is used, we rely on the Powheg or MadGraph5\_aMC@NLO gene
  & $n_\textrm{leptons}$ & OS pair & $n_\textrm{b-tags}$ & \ST [GeV] & \MET [GeV] \\
 \hline
 \ttbar & 2 & 1 opposite flavor & $\geq 1$ & $> 300$ \\
-\Z + jets & 3 & 1 same flavor, on-\Z & & & $< 50$ \\
-\WZ & 3 & 1 same flavor, on-\Z & & & 50--100 \\
+\Z + fake & 3 & 1 same flavor, on-\Z & & & $< 50$ \\
+\WZ & 3 & 1 same flavor, on-\Z & & & 50--150 \\
 \ZZ & $\geq 4$ & 2 same flavor, at least one on-\Z & & & $< 50$ \\
 \hline
 \end{tabular}

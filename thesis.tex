@@ -9,10 +9,14 @@
 %\addtolength{\topmargin}{0.3cm}
 
 
+\usepackage[utf8x]{inputenc}	% UTF-8
+\usepackage[T1]{fontenc}		% Improve umlaut support
+\usepackage{ae}				% German Sharp S
+\usepackage{lmodern}
+\usepackage[pdftex,bookmarks=true,bookmarksopenlevel=1,colorlinks=true,pdfborder={0 0 0}]{hyperref}
+\usepackage{microtype}
 \usepackage{float}
 \usepackage{rotating}
-\usepackage[pdftex,bookmarks=true,bookmarksopenlevel=1]{hyperref}
-\usepackage{hyperref}
 \usepackage{comment} 
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
@@ -40,6 +44,7 @@
 \newcommand{\relIso}{\ensuremath{I_\text{rel}}\xspace}
 \newcommand{\miniIso}{\ensuremath{I_\text{mini}}\xspace}
 \newcommand{\multiIso}{\ensuremath{I_\text{multi}}\xspace}
+\newcommand\hairspace{\kern .08333em }
 
 \pdfpkresolution=2400 % needed for \dlsh and \drsh
 
@@ -117,22 +122,22 @@ Sunil, Rutgers group, Italians, Würzburg University, DAAD, sdw}
 
 \section*{TODO}
 \begin{itemize}
-	\item dataset and MC sample table
-	\item mention that SM and detector description are taken from Master's Thesis
+	\item Rephrase isolation description in Sec.~\ref{sec:Selection/Object}
+	\item decide whether to mention global AIC veto in event selection, Sec.~\ref{sec:Selection}
+	\item unifify fake/misidentified wording
+	\item make appendices look nice
+	\item write software appendix \ref{app:Software}
 \end{itemize}
 
 \input{Introduction/Introduction}
 \input{Theory/Theory}
 \input{Detector/Detector}
+\input{Samples/Samples}
+\input{Selection/Selection}
 \input{Strategy/Strategy}
-\input{Optimization/Optimization}
-\input{ObjectID/ObjectID}
-\input{EventSelection/EventSelection}
-\input{SignalModel/SignalModel}
 \input{Background/Background}
 \input{Systematics/Systematics}
 \input{Results/Results}
-\input{Interpretation/Interpretation}
 \input{Summary/Summary}
 
 \clearpage

@@ -1,21 +1,27 @@
-\chapter{\texorpdfstring{\Z}{Z} binning}
+\chapter{\texorpdfstring{\boldmath{\Z}}{Z} binning}
 \label{app:Zbinning}
-Note: This section currently has 8 TeV information and has not been updated
-
-\fixme{check interference with MT definition in WZ background section}
 
 We bin events with an OSSF pair depending on whether the pair invariant mass is in the \Z window, or below/above. In case of ambiguity, we need to pick a specific pair. We compare two methods:
 \begin{enumerate}
 	\item We take the pair whose invariant mass is closest to the \Z mass.
-	\item We take the pair closest to the \Z mass, with the additional condition that pairs above the \Z window are not considered if there is a pair below the \Z window (thus shifting events from high-\Z to low-\Z).
+	\item We take the pair closest to the \Z mass, with the additional condition that pairs above the \Z window are not considered if there is a pair below the \Z window (thus shifting events from above-\Z to below-\Z).
 \end{enumerate}
-Fig.~\ref{fig:app:Zbinning} shows that there is little difference to both approaches. We decide to take the second approach to achieve a more separative categorization of background, especially around the high end of the \Z window.
+
+Fig.~\ref{fig:app:Zbinning} shows that there is little difference between both approaches. We decided to take the second approach to achieve a more separative categorization of background, especially around the high end of the \Z window.
 
 \begin{figure}
 \begin{center}
-	\includegraphics[width=.5\textwidth]{Appendix/Z_NOTTRILEPTONONZ_oldMOSSF}%
-	\includegraphics[width=.5\textwidth]{Appendix/Z_NOTTRILEPTONONZ_MOSSF}
-	\caption{$m_{\ell\ell}$ distribution in in the dilepton fake region (off-\Z, trilepton events with $m_{\ell\ell\ell}$ on \Z have been vetoed). \enskip left)~method 1 \enskip right)~method 2
+	\begin{subfigure}[b]{.7\textwidth}
+		\includegraphics[width=\textwidth]{Appendix/Z_NOTTRILEPTONONZ_oldMOSSF}%
+		\caption{method 1}
+	\end{subfigure}
+	\begin{subfigure}[b]{.7\textwidth}
+		\includegraphics[width=\textwidth]{Appendix/Z_NOTTRILEPTONONZ_MOSSF}
+		\caption{method 2}
+	\end{subfigure}
+	\caption{$m_{\ell\ell}$ distribution in in the dilepton fake region (off-\Z, trilepton events with $m_{\ell\ell\ell}$ on \Z have been vetoed).
 	\label{fig:app:Zbinning}}
 \end{center}
 \end{figure}
+
+Note that the numbers in Fig.~\ref{fig:app:Zbinning} have been derived with the 8\,\TeV CMS dataset from Run I. The conclusions, however, are also valid for Run II at 13\,\TeV.

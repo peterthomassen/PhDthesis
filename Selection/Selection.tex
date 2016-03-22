@@ -7,57 +7,55 @@
 \subsection{Electrons and Muons}
 Events that pass the trigger are required to satisfy additional selection criteria. Electrons with $\pt \geq 7\,\GeV$ and $|\eta| \leq 2.5$ as well as muons with $\pt \geq 5\,\GeV$ and $|\eta| \leq 2.4$ are reconstructed using the particle-flow (PF) algorithm which utilizes measured quantities from the tracker, calorimeter, and muon system \cite{CMS-PAS-PFT-09-001}. The matching candidate tracks must satisfy quality requirements and spatially match with the energy deposits in the ECAL and the tracks in the muon detectors, as appropriate.
 
-Sources of background leptons include genuine leptons occurring inside or near jets, hadrons that punch through into the muon system and are misidentified as muons, hadronic showers with large electromagnetic fractions, or photon conversions. An isolation requirement -- imposing a selection based on the size of the lepton transverse momentum in comparison to the transverse momenta of other particles in its immediate neighborhood -- strongly reduces the background from misidentified leptons, since most of them occur inside jets.
+Sources of background leptons include genuine leptons occurring inside or near jets, hadrons that punch through into the muon system and are misidentified as muons, hadronic showers with large electromagnetic fractions, or photon conversions. Since the leptons from the seesaw signal are generally not related to hadronic activity, electrons and muons are expected to be spatially isolated from any jets occurring in the event. Furthermore, as jets occasionally produce leptons in their vincinity, an isolation requirement strongly reduces the background from such misidentified leptons.
 
-\fixme{This section is taken verbatim from SUS-15-008 PAS \cite{CMS-PAS-SUS-15-008}.}
+The isolation requirement imposes a selection based on the size of the lepton transverse momentum in comparison to the transverse momenta of other particles in its immediate neighborhood. A common isolation discriminator is the the ``relative isolation'',
+\begin{equation}
+	I_\text{rel}(\Delta R^\textrm{max}) = \frac{\sum_\text{other}^{\Delta R < \Delta R^\textrm{max}} \pt^\text{other}}{\pt^\ell},
+\end{equation}
+defined as the transverse momentum sum of charged hadrons, neutral hadrons, and photons within a $\Delta R^\textrm{max}$ cone around the lepton candidate, divided by the lepton's own \pt.
 
-The charged leptons produced in decays of heavy particles are typically spatially isolated from the hadronic activity in the event,
-while the leptons produced in the decays of hadrons or misidentified leptons are usually
-embedded in jets. This distinction becomes less evident moving to
-highly boosted systems where decay products tend to overlap.
-%Therefore, in order to discriminate between the signal and background leptons, 
-Therefore, we use the multi-isolation discriminator which is constructed using three variables as input:
+However, as the masses of the heavy fermions in the seesaw model are high, their decay products are expected to be boosted and thus harder to distinguish geometrically. The relative isolation variable therefore does not provide good enough separation. We therefore use the multi-isolation discriminator which has better discrimination power in the case of boosted topologies \cite{CMS-PAS-SUS-15-008}. This is achieved using the following three input variables:
 
-\begin{itemize}
-	\item A mini-isolation (\miniIso)~\cite{Rehermann:2010vq} which is computed as a ratio of the scalar sum of transverse momenta of the charged hadrons, neutral hadrons, and photons within a cone of radius $R (\pt^\ell)$ around the lepton candidate direction at the origin, to the transverse momentum of the candidate. The cone radius $R$depends on lepton $\pt$ as 
+\begin{enumerate}
+	\item A modified version of the relative isolation $I_\textrm{rel}$, called mini-isolation (\miniIso) \cite{Rehermann:2010vq}. Just like $I_\textrm{rel}$, it is the ratio of the scalar sum of the transverse momenta of charged hadrons, neutral hadrons, and photons within a cone around the lepton candidate; however, the cone radius depends on the transverse momentum of the lepton candidate itself as
 		\begin{equation}
-			R(\pt^\ell) = \dfrac{10\GeV}{\min\left[\max\left(\pt^\ell, 50\GeV\right), 200\GeV\right]}.
+			\Delta R^\textrm{max}(\pt^\ell) = \dfrac{10\GeV}{\min\left[\max\left(\pt^\ell, 50\GeV\right), 200\GeV\right]}.
 		\end{equation}
-		The varying isolation cone definition reduces the inefficiency from accidental overlap between the lepton and jets in a busy event environment.
-	\item A ratio between the lepton $\pt^\ell$ and $\pt^\text{jet}$ of a jet containing the lepton: 
+		The cone size thus varies between 0.2 and 0.05 as a function of the lepton \pt and is smaller for higher values of the lepton \pt. Hence, on the one hand, we reduce the chance of overlap with other objects as the lepton becomes stiffer. On the other hand, as misidentified leptons usually have rather low \pt, the larger cone size for low-\pt leptons improves the background rejection efficiency.
+		
+	\item We use the ratio of the lepton \pt and the \pt of a jet in which the lepton is contained:
 		\begin{equation}
 			\ptRatio = \dfrac{\pt^\ell}{\pt^\text{jet}}.
 		\end{equation}
-		The \ptRatio variable acts as a relative isolation in a larger cone. It improves mini-isolation performance when there are no nearby jets, expecially for low-$\pt$ leptons. %It helps to estimate level of lepton isolation for low-$\pt$ leptons.
-	\item Transverse momentum of the lepton relative to the residual momentum of the closest jet after lepton momentum subtraction:
-	  \begin{equation}
-		\ptRel=\frac{(\vec{p}(\text{jet})-\vec{p}(\ell))\cdot \vec{p}(\ell) }{|\vec{p}(\text{jet})-\vec{p}(\ell)|}.
-	  \end{equation}
-	The \ptRel variable allows to identify leptons that accidentally overlap with other jets in the event.
-\end{itemize}
-
+		Note that every lepton is, by definition, contained in a jet (which may contain nothing else besides the lepton). The \ptRatio variable thus tells us the relative share of jet momentum that is associated with the lepton. The larger this fraction, the lesser is the chance that the lepton stems from a hadronic decay or is misidentified. This variable is similiar to $I_\textrm{rel}$, except that the cone is replaced by the jet.
+		
+	\item To avoid rejecting leptons that fail the \ptRatio requirement because they overlap accidentally with another jet in the event, we consider the lepton candidate \pt along the axis of the residual momentum of the closest jet after subtracing the lepton \pt:
+		\begin{equation}
+			\ptRel=\frac{(\vec{p}(\text{jet})-\vec{p}(\ell))\cdot \vec{p}(\ell) }{|\vec{p}(\text{jet})-\vec{p}(\ell)|}.
+		\end{equation}
+		If the \ptRatio condition is not met while the lepton still has substantial momentum along the residual momentum axis, the lepton is allowed to pass.
+\end{enumerate}
 A lepton is considered to be isolated if the following condition is met:
 \begin{equation}
 	\miniIso < I_1 \wedge ( \ptRatio > I_2 \vee \ptRel > I_3 )
 \end{equation}
 
-The values of $I_\text{i}$, $i = 1,2,3,$ depend on the lepton flavor. As the chance of misidentification is higher for electrons, tighter isolation values are used in this case (see Table~\ref{tab:isoWPs}). 
-\begin{table}[h]
+The values of $I_\text{i}$, $i = 1,2,3,$ depend on the lepton flavor. For electrons, the medium working point is employed, while for muons, we use the tight working point. As the chance of misidentification is higher for electrons, tighter isolation values are used in this case (see Table~\ref{tab:isoWPs}). Further details on the input variables, these and other working points, and their efficiencies can be found in \cite{CMS-PAS-SUS-15-008}.
+
+\begin{table}
 \centering
 \caption{Multi-isolation working points used in the analysis.} \label{tab:isoWPs}
 \begin{tabular}{l ccc}
 \hline\hline
-Isolation value & Loose leptons  & Tight muons & Tight electrons  \\
+Isolation value & Muons & Electrons  \\
 \hline
-$I_1$ & 0.4 & 0.16 & 0.12 \\
-$I_2$ & 0 & 0.76 & 0.80 \\
-$I_3$ [GeV] & 0 & 7.2 & 7.2 \\
+$I_1$ & 0.20 & 0.16 \\
+$I_2$ & 0.69 & 0.76 \\
+$I_3$ [GeV] & 6.0 & 7.2 \\
 \hline
 \end{tabular}
 \end{table}
-%----------------------------------------------------------------------------------------------------------------------------
-
-For electrons, the medium working point is employed, while for muons, we use the tight working point. Further details on the input variables, working points, and their efficiencies can be found in \cite{CMS-PAS-SUS-15-008}.
 
 The signal leptons originate from the interaction point. After the isolation selection, the most significant background sources are residual non-prompt leptons from heavy quark decays, where the lepton tends to be more isolated because of the high \pt with respect to the jet axis. This background is reduced by requiring that the leptons satisfy $d_\textrm{z} \leq 0.1\,\cm$ where $d_\textrm{z}$ is the longitudinal impact parameter with respect to the primary interaction vertex, and that the impact parameter $d_\textrm{xy}$ between the track and the event vertex in the plane transverse to the beam axis be small: $d_\textrm{xy} \leq 0.05\,\cm$. The isolation and impact parameter criteria retain signal but significantly reject misidentified leptons.
 

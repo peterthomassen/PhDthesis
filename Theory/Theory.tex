@@ -79,7 +79,7 @@ While the Standard Model predicts the electromagnetic, weak, and strong phenomen
 \begin{itemize}
 	\item The Standard Model does not account for \textit{gravity} at all. It is described by General Relativity, and it is believed that, in principle, a unification of the theories is possible.
 	\item The Standard Model contains a number of parameters that differ from expectation by several orders of magnitude for unknown reasons. For example, the mass of the Higgs boson was expected to be around $10^{15}\GeV$ due to top quark loops, but it is in fact on the electroweak scale \cite{Aad:2015zhl}. This issue is referred to as the \textit{Hierarchy Problem} \cite{Martin:1997ns}.
-	\item The Standard Model does not explain \textit{Dark Matter} \cite{}.
+	\item The Standard Model does not explain \textit{Dark Matter} \cite{Pomarol:2012sb}.
 	\item The Standard Model requires the neutrinos to be massless. However, the existence of oscillations between neutrinos flavors has been experimentally observed, implying that their mass is in fact non-zero \cite{PhysRevD.22.2227,Fukuda:1998fd,Nustatus}.
 \end{itemize}
 
@@ -89,6 +89,8 @@ Several attempts have been made to find remedies for these issues from a theoret
 
 \section{Type-III Seesaw Mechanism}
 \subsection{Phenomenology}
+\label{sec:Theory/SeesawPhenomenology}
+
 The seesaw mechanism introduces new heavy particles coupling both to leptons and to Higgs doublets, and accounts for both the neutrino masses and their smallness (six or more orders of magnitude smaller than that of the electron) \cite{SeesawI,typeIa,typeIb,typeIe,typeIIa,typeIIb,typeIIc,typeIId,typeIIe,SeesawIII:a,Seesawinverse}.
 
 %These new heavy particles could be weak-singlet fermions (type I \cite{SeesawI,typeIa,typeIb,typeIe}); weak-triplet scalars (type II \cite{typeIIa,typeIIb,typeIIc,typeIId,typeIIe}); or weak-triplet fermions (type III \cite{SeesawIII:a}). They generate a small Majorana mass for the neutrinos, given by, in type I and type III models: $m_{\nu}=Y^T~ \mathcal{M}^{-1}~ Y ~ v^2/2$, where $Y^T$ is the transpose of the Yukawa coupling matrix between the mediators and the SM fermions, $\mathcal{M}$ is the mass matrix of the heavy partner of the neutrinos and $~v$ is the Higgs vacuum expectation value. When mediator mass is large enough (of order of $10^{14}\,\GeV$), small neutrino masses are generated even for order $O(1)$ Yukawa couplings. If $M$ is smaller (of the order of a few hundreds of \GeV, as in LHC searches), either smaller Yukawa couplings (i.\,e. ``natural'' mixing angles of the order of $10^{-6}$) are required to generate small neutrino masses, or an alternative suppression mechanism is needed (e.\,g. seesaw inverse mechanism \cite{Seesawinverse}). The possible allowed values of the mixing parameters and their products are constrained by precision electroweak data \cite{typeIIIconstraint}.
@@ -119,7 +121,7 @@ The decay rate of a $\Sigma$ to a given lepton $\ell$ is proportional to $v_{\el
 \subsection{Signal Model and Generation}
 \label{sec:Samples/Signal}
 
-We generate MC events to simulate all 27 production and decay mode combinations (see Sec.~\ref{sec:Introduction}). Generation for the model begins with a FeynRules Model file \cite{SeesawIII_Biggio}. Monte Carlo events are then generated in MadGraph5\_aMC@NLO \cite{Alwall:2011uj}. Bosonic decays are handled through Pythia 8, which is also in charge of hadronization \cite{Sjostrand:2007gs}. At the analysis level, we apply weights to correct for mismodeling of pile-up and \MET resolution.
+We generate MC events to simulate all 27 production and decay mode combinations (see Sec.~\ref{sec:Introduction}). Generation for the model begins with a FeynRules Model file \cite{SeesawIII_Biggio}. SaloMonte Carlo events are then generated in MadGraph5\_aMC@NLO \cite{Alwall:2011uj}. Bosonic decays are handled through Pythia 8, which is also in charge of hadronization \cite{Sjostrand:2007gs}. At the analysis level, we apply weights to correct for mismodeling of pile-up and \MET resolution.
 
 The production cross sections were calculated with NLO + NLL accuracy using the CTEQ6.6 and MSTW2008nlo90cl parton distribution functions (PDFs) \cite{Fuks:2012qx,Fuks:2013vua}. Flavor-democratic values of the mixing angles are taken ($V_e = V_\mu = V_\tau = 10^{-6}$). This has no direct consequence on the fermion production cross section, but affects the branching ratios. The branching fraction of a heavy fermion to a lepton of flavor $\ell = e, \mu, \tau$ is proportional to $v_{\ell N} = \frac{V_\ell}{\sqrt{|V_e|^2 + |V_\mu|^2 + |V_\tau|^2}}$. Therefore, the flavor-democratic scenario gives $v_{\ell N} = \frac{1}{\sqrt{3}}$. The branching ratios from the pair-produced fermions to the bosonic level of the most relevant decay modes are given in Fig.~\ref{fig:SeesawBR}.
 

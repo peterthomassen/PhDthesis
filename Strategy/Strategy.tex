@@ -2,12 +2,34 @@
 \label{chap:Strategy}
 
 \section{General Approach}
+\label{sec:Strategy/general}
 
 Candidate events in this search must have a total of at least three leptons, each of which can be either an electron or a muon. We classify multilepton events into search channels on the basis of the number of leptons, lepton flavor, lepton relative charges, charge and flavor combinations, and other kinematic quantities described below.
 
 We classify each event in terms of the maximum number of opposite-sign same-flavor (OSSF) dilepton pairs that can be made by using each lepton only once. For example, both $\mu^+\mu^-\mu^-$ and $\mu^+\mu^-e^-$ are OSSF1, $\mu^+\mu^+e^-$ is OSSF0, and $\mu^+\mu^-e^+e^-$ is OSSF2. We denote a lepton pair of different flavors as $\ell\ell^\prime$.
 
-We classify events as containing a leptonically-decaying \Z if at least one OSSF pair has $m_{\ell^+\ell^-}$ in the \Z mass window $91 \pm 10\,\GeV$. For $m_{\ell^+\ell^-}$ outside the \Z boson mass window, events are separated into bins below and above the \Z mass window. In cases of ambiguity (such as $\mu^+\mu^-\mu^-$), the pair below the \Z mass window takes precedence (thus shifting events from high mass to low mass, for a more separative background categorization). We refer to these three mass ranges as ``on-\Z'', ``below-\Z'', and ``above-\Z''.
+We classify events as containing a leptonically-decaying \Z if at least one OSSF pair has $m_{\ell^+\ell^-}$ in the \Z mass window $91 \pm 10\,\GeV$. For $m_{\ell^+\ell^-}$ outside the \Z boson mass window, events are separated into bins below and above the \Z mass window. We refer to these three mass ranges as ``on-\Z'', ``below-\Z'', and ``above-\Z''.
+
+In cases of ambiguity (such as $\mu^+\mu^-\mu^-$ with one pair below and one pair above \Z), we need to pick a specific pair. We compare two methods:
+\begin{enumerate}
+	\item Choose the pair whose invariant mass is closest to the \Z mass.
+	\item Choose the pair closest to the \Z mass, with the additional condition that pairs above the \Z window are not considered if there is a pair below the \Z window (thus shifting events from above-\Z to below-\Z).
+\end{enumerate}
+Fig.~\ref{fig:app:Zbinning} shows that there is little difference between both approaches. Nevertheless, we take the second approach to achieve a more separative categorization of background, especially around the high end of the \Z window.
+\begin{figure}
+\begin{center}
+	\begin{subfigure}[b]{.7\textwidth}
+		\includegraphics[width=\textwidth]{Strategy/Z_L3MET0to50_noAIC_OSSFCLOSEMLL}%
+		\caption{method 1}
+	\end{subfigure}
+	\begin{subfigure}[b]{.7\textwidth}
+		\includegraphics[width=\textwidth]{Strategy/Z_L3MET0to50_noAIC_MOSSF}
+		\caption{method 2}
+	\end{subfigure}
+	\caption{$m_{\ell\ell}$ distribution in in the dilepton fake region (off-\Z, trilepton events with $m_{\ell\ell\ell}$ on \Z have been vetoed).
+	\label{fig:app:Zbinning}}
+\end{center}
+\end{figure}
 
 The most important multilepton background processes are \WZ, \Z or \ttbar events in which there is a misidentified lepton, and \ZZ production. In addition, there are various rare background processes like WWZ or $\ttbar\PW$. However, the level of SM background varies considerably across channels; for example, channels containing OSSF pairs suffer from larger backgrounds than do channels with OSSF0. Hence, all these charge combinations are considered as different channels.
 

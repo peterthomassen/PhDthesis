@@ -9,8 +9,9 @@
 %\addtolength{\topmargin}{0.3cm}
 
 
-\usepackage[utf8x]{inputenc}	% UTF-8
-\usepackage[T1]{fontenc}		% Improve umlaut support
+\usepackage[utf8]{inputenc}	% UTF-8
+\usepackage[T1]{fontenc}	% Improve umlaut support
+\usepackage{textcomp}		% https://tex.stackexchange.com/questions/49610/use-biblatex-and-utf8
 \usepackage{ae}				% German Sharp S
 \usepackage{lmodern}
 \usepackage[pdftex,bookmarks=true,bookmarksopenlevel=1,colorlinks=true,pdfborder={0 0 0}]{hyperref}
@@ -19,7 +20,7 @@
 \usepackage{rotating}
 \usepackage{comment} 
 \usepackage{graphicx}
-\usepackage[numbers]{natbib}
+%\usepackage[numbers]{natbib}
 \usepackage{slashed}
 \usepackage{lmodern}
 \usepackage{mathrsfs}
@@ -36,6 +37,8 @@
 \usepackage{braket}
 \usepackage{subcaption}
 \usepackage{units}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\bibliography{thesis.bib}
 
 \newcommand{\equates}{\mathrel{\widehat{=}}}
 \providecommand{\fixme}[1]{{\sffamily{\bfseries{}FIXME:} #1}}
@@ -98,10 +101,12 @@ A search for type-III seesaw signal in events with three or more electrons or mu
 % Begin afterpreface
 
 \acknowledgements{
-First and foremost, I would like to thank Emmanuel Contreras-Campana for having provided 
-me with this thesis template.
+Many individuals and institutions have supported me during my Ph.\,D. studies and thesis writing. I would like to express my graditude especially to my supervisor Prof.~Sunil Somalwar whose advice and guidance were extremely valuable, and to the members of our research groups, especially Dr.~Richard Gray, Dr.~Matt Walker, and Dr.~Halil Saka, as well as to my fellow graduate students Sanjay Arora, Christian Contreras-Campaña, Emmanuel Contreras-Campaña, Maximilian Heindl, Shruti Panwalkar, Patrick Zywicki for their helpful discussions, input, and distractions. Special thanks go to Prof.~Scott Thomas for his guidance on theoretical matters, and to Ezio Torassa and Andrea Gozzelino for the collaboration on the seesaw model, and to my dear fellow student Elliot ``Tote'' Hughes.
 
-Sunil, Rutgers group, Italians, Würzburg University, DAAD, sdw}
+My involvement with Rutgers University started initially with an exchange organized by Würzburg University. Financial support for the exchange was provided by the German Academic Exchange Service (DAAD). Further funds, for travel purposes as well as generally, came from several scholarships of the Foundation of German Business (Stiftung der Deutschen Wirtschaft, sdw), COLA support from the National Science Foundation (NSF), as well as from Rutgers University and Prof.~Somalwar's NSF grant.
+
+This thesis contains material from previous publications of the author \cite{Thomassen2012,CMS-PAS-EXO-16-002}. Each occurrence is noted in the text.
+}
 
 
 %\dedication{
@@ -141,8 +146,8 @@ Sunil, Rutgers group, Italians, Würzburg University, DAAD, sdw}
 
 \addcontentsline{toc}{chapter}{Bibliography}
 \begin{singlespace}
-\bibliographystyle{ieeetr}
-\bibliography{thesis.bib}
+%\bibliographystyle{ieeetr}
+\printbibliography
 \end{singlespace}
 
 %%%%%%%%%%%%%%%%%% End of thesis %%%%%%%%%%%%%%%%%%

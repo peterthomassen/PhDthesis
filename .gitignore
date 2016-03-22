@@ -7,4 +7,6 @@ thesis.lot
 thesis.out
 thesis.pdf
 thesis.toc
-
+thesis-blx.bib
+thesis.bcf
+thesis.run.xml

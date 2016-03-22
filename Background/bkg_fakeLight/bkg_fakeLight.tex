@@ -37,7 +37,7 @@ We may therefore form a seed sample with photons as proxies for fake leptons com
 		\includegraphics[width=\textwidth]{Background/bkg_fakeLight/goodPhotonsDRgoodMuons_ONZ}
 		\caption{dilepton region on-\Z}
 	\end{subfigure}
-	\caption{$\Delta R$ distributions between photon and muon \fixme{style}
+	\caption{$\Delta R$ distributions between photon and muon
 	\label{fig:fakeLight_AIC_DR}}
 \end{center}
 \end{figure}
@@ -69,11 +69,11 @@ We apply a 52\,\% systematic uncertainty on the total photon-based background es
 
 
 \subsection{Fake Leptons from Jets}
-In order to determine the background with misidentified electrons and muons from jets, we use isolated tracks a proxies. The isolation criteria that we require these tracks to satisfy are identical to our muon isolation criteria. We produce a track-based fake 3$\ell$ background seed sample by reassigning isolated tracks to the lepton collections, so that the sample has one less lepton than the signal regions and an isolated track instead. All combinations are taken into account, \ie tracks are used to create both a fake-$e$ and a fake-$\mu$ event.\footnote{Multiple fakes in an event are not considered (neither of same proxy type (\eg two tracks) nor of different type). Hybrid fakes (one from a track, one from a photon) are currently not supported for technical reasons; same-type fakes however turned out to cause problems with the \ttbar MC subtraction. Given the smallness of the fake rates ($O(10^{-2})$), the contribution from multiple fakes is negligible anyways.} The fake background can then be estimated by applying the fake rate after requiring the signal region selection in this seed sample.
+In order to determine the background with misidentified electrons and muons from jets, we use isolated tracks a proxies. The isolation criteria that we require these tracks to satisfy are identical to our muon isolation criteria (see Sec.~\ref{sec:Selection/Object}). We produce a track-based fake 3$\ell$ background seed sample by reassigning isolated tracks to the lepton collections, so that the sample has one less lepton than the signal regions and an isolated track instead. All combinations are taken into account, \ie tracks are used to create both a fake-$e$ and a fake-$\mu$ event.\footnote{Multiple fakes in an event are not considered (neither of same proxy type (\eg two tracks) nor of different type). Hybrid fakes (one from a track, one from a photon) are currently not supported for technical reasons; same-type fakes however turned out to cause problems with the \ttbar MC subtraction. Given the smallness of the fake rates ($O(10^{-2})$), the contribution from multiple fakes is negligible anyways.} The fake background can then be estimated by applying the fake rate after requiring the signal region selection in this seed sample.
 
 The fake rate $\frac{N(3\ell)}{N(2\ell + \textrm{track)}}$ is determined using events with 3 electrons or muons including an OSSF pair on-\Z and $\MET < 50\,\GeV$. This is the prominent \Z peak region with an additional lepton. As we subtract contributions from other backgrounds in the numerator and the denominator, this misidentification rate describes the number of misidentified leptons as a fraction of the number of 2$\ell$ + track events from all processes that are not modeled otherwise.
 
-To achieve the best possible modeling, we make sure that the kinematic properties of the isolated tracks in this region resemble those of the misidentified leptons by applying weights to the track-based background in bins of the the lowest \pt lepton (proxy) which is generally the fake (Fig.~\ref{fig:fakeLight_Z_MINleptonPT}). We then measure the number of 3$\ell$ events in data per 2$\ell$ + track event (fake rate), as a function of the flavor of both the fake lepton and of the \Z decay products and find:
+To achieve the best possible modeling, we make sure that the kinematic properties of the isolated tracks in this region resemble those of the misidentified leptons by applying weights to the track-based background in bins of the the lowest \pt lepton (proxy) which is generally the fake (Fig.~\ref{fig:fakeLight_Z_MINleptonPT}). Appendix~\ref{app:MOSSFlepton,track} contains additional plots supporting the suitability of tracks as lepton proxies. We then measure the number of 3$\ell$ events in data per 2$\ell$ + track event (fake rate), as a function of the flavor of both the fake lepton and of the \Z decay products and find:
 \begin{itemize}
 	\item muons: $(1.49 \pm 0.21)\,\%$ ($ee$ environment), $(1.49 \pm 0.17)\,\%$ ($\mu\mu$ environment),
 	\item electrons: $(1.37 \pm 0.22)\,\%$ ($ee$ environment), $(1.75 \pm 0.19)\,\%$ ($\mu\mu$ environment).
@@ -97,7 +97,7 @@ To apply the misidentification rate in a signal region, we multiply it by the to
 \end{center}
 \end{figure}
 
-Fig.~\ref{fig:fakeLight_Z_MOSSF} shows the mass distribution of the ``best'' OS dilepton pair across its full range in the trilepton control region, both with and without an AIC veto (for off-\Z events whose 3$\ell$ invariant mass is on \Z); Fig.~\ref{fig:fakeLight_Z_MOSSF_byFlavor} distinguishes by flavors. In case of ambiguity, the ``best'' OS dilepton pair is the one whose invariant mass is closest to the \Z mass, with the additional condition that pairs above the \Z window are not considered if there is a pair below the \Z window (thus shifting events from high-\Z to low-\Z, for a more separative background categorization). For a comparison with another \Z-ness binning scheme, see Appendix~\ref{app:Zbinning}.
+Fig.~\ref{fig:fakeLight_Z_MOSSF} shows the mass distribution of the ``best'' OS dilepton pair across its full range in the trilepton control region, both with and without an AIC veto (for off-\Z events whose 3$\ell$ invariant mass is on \Z); Fig.~\ref{fig:fakeLight_Z_MOSSF_byFlavor} distinguishes by flavors. In case of ambiguity, the ``best'' OS dilepton pair is the one whose invariant mass is closest to the \Z mass, with the additional condition that pairs above the \Z window are not considered if there is a pair below the \Z window (thus shifting events from high-\Z to low-\Z, for a more separative background categorization, see Sec.~\ref{sec:Strategy/general}).
 
 \begin{figure}
 \begin{center}
@@ -145,7 +145,7 @@ As an additional cross-check, we show the \HT distribution in the \Z region (Fig
 	\label{fig:fakeLight_Z_HT}}
 \end{center}
 \end{figure}
-Finally, we perform a closure test in Drell-Yan MC, comparing the on-Z and off-Z behavior in the control trilepton region (see Fig.~\ref{fig:fakeLight_closure}). We find that the fake rates agree within 5\,\% on and off Z. The statistical uncertainty of the numerator in the high-Z region is 15\,\%. (We are planning to redo this study with increased statistics using a larger DY sample.)
+Finally, we perform a closure test in Drell-Yan MC, comparing the on-Z and off-Z behavior in the control trilepton region (see Fig.~\ref{fig:fakeLight_closure}). We find that the fake rates agree within 5\,\% on and off Z. The statistical uncertainty of the numerator in the high-Z region is 15\,\%.
 
 \begin{figure}
 \begin{center}

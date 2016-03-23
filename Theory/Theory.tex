@@ -34,9 +34,9 @@ The SM makes use of several types of fields, each describing a different kind of
 		\hline
 		\multirow{5}{*}{$\begin{matrix}L = 0, \\ B = 0\end{matrix}$} & $\gamma$ & 0 & 1 & 0 \tabularnewline
 		 & $g$ & 0 & 1 & 0 \tabularnewline
-		 & $Z$ & $91.2\cdot 10^3$ & 1 & 0 \tabularnewline
-		 & $W^\pm$ & $80.4\cdot 10^3$ & 1 & $\pm 1$ \tabularnewline
-		 & $H$ & $125.09 \cdot 10^3$ & 0 & 0 \tabularnewline
+		 & \Z & $91.2\cdot 10^3$ & 1 & 0 \tabularnewline
+		 & $\PW^\pm$ & $80.4\cdot 10^3$ & 1 & $\pm 1$ \tabularnewline
+		 & \PH & $125.09 \cdot 10^3$ & 0 & 0 \tabularnewline
 	\end{tabular}
 	\caption{Elementary particles in the Standard Model \cite{PhysRevD.86.010001,ATLAS:2014wva,Aad:2015zhl}. For electrically charged particles, anti-particles with opposite charge exist. Neutrinos presumably have anti-particles with opposite chirality. Anti-particles have been omitted in this summary.}
 	\label{tab:SM}
@@ -68,7 +68,7 @@ Quarks have not been observed individually. In the SM, they thus form bound stat
 \subsection{Bosons}
 The quantum field theory on which the SM is built is invariant under Lorentz and CPT transformations, and under certain gauge transformations. To prevent the theory from losing this invariance, the existence of so-called gauge bosons was predicted, and indeed later observed. These particles act as the force carriers of the fundamental forces.
 
-The most well-known one is the massless photon ($\gamma$) which is electrically neutral and mediates the electromagnetic interaction. A very similar particle, although massive, is the $Z$ boson which can interact electromagnetically and weakly. Furthermore, the charged $W^+$ and $W^-$ bosons exist. Conceptually, they have the same origin as the $Z$ boson, which is why they take part in the same interactions.\footnote{In fact, the $\gamma$ and $Z$ fields are superpositions of the more fundamental $B$ and $W^0$ fields. The $B$ field arises from spontaneous $U(1)$ symmetry breaking, while the $W^i$ come from the breaking of $SU(2)$.} A great theoretical achievement was the unification of the electromagnetic and the weak interaction into a combined concept, the electroweak interaction.
+The most well-known one is the massless photon ($\gamma$) which is electrically neutral and mediates the electromagnetic interaction. A very similar particle, although massive, is the \Z boson which can interact electromagnetically and weakly. Furthermore, the charged $\PW^+$ and $\PW^-$ bosons exist. Conceptually, they have the same origin as the \Z boson, which is why they take part in the same interactions.\footnote{In fact, the $\gamma$ and \Z fields are superpositions of the more fundamental $B$ and $W^0$ fields. The $B$ field arises from spontaneous $U(1)$ symmetry breaking, while the $W^i$ come from the breaking of $SU(2)$.} A great theoretical achievement was the unification of the electromagnetic and the weak interaction into a combined concept, the electroweak interaction.
 
 The strong force between quarks is carried by the massless gluons ($g$) which come in eight different color-anticolor combinations.
 
@@ -107,7 +107,7 @@ Within the type-III seesaw model \cite{SeesawIII:a}, the neutrino is considered 
 \end{figure}
 
 We conduct a search for this signal by examining the final state with at least three electrons or muons. The primary decay channels of interest are $\Sigma^\pm \to \PW^\pm \nu$, $\Sigma^\pm \to \Z \ell^\pm$, $\Sigma^\pm \to \PH \ell^\pm$, $\Sigma^0 \to \PW^\pm \ell^\mp$, $\Sigma^0 \to \Z \nu$, $\Sigma^0 \to \PH \nu$, where $\ell = e, \mu$. Decays of $\Sigma^0 \Sigma^\pm$ and $\Sigma^+ \Sigma^-$ pairs result in 27 different production processes and can naturally lead to multilepton final states if several \PW\ or \Z\ bosons are involved, either directly or via a Higgs boson decay. An example Feynman diagram for one of the most relevant processes with three leptons in the final state, $\Sigma^\pm \Sigma^0 \to \PW^\pm \nu \PW^\pm \ell^\mp$ with leptonic $\PW^\pm$ decays, is shown in Fig.~\ref{fig:SeesawDecay}.
-The decay rate of a $\Sigma$ to a given lepton $\ell$ is proportional to $v_{\ell N} = \frac{V_\ell}{\sqrt{|V_e|^2 + |V_\mu|^2 + |V_\tau|^2}}$. In the democratic scenario, the mixing parameters $V_\ell$ are the same for all the leptons.
+The decay rate of a $\Sigma$ to a given lepton $\ell$ is proportional to $v_{\ell N} = \frac{V_\ell}{\sqrt{|V_e|^2 + |V_\mu|^2 + |V_\tau|^2}}$. In the democratic scenario, the mixing parameters $V_\ell$ are the same for all the leptons so that $v_{\ell N} = \frac{1}{\sqrt{3}}$.
 
 \begin{figure}
 \begin{center}
@@ -123,7 +123,7 @@ The decay rate of a $\Sigma$ to a given lepton $\ell$ is proportional to $v_{\el
 
 We generate MC events to simulate all 27 production and decay mode combinations (see Sec.~\ref{sec:Introduction}). Generation for the model begins with a FeynRules Model file \cite{SeesawIII_Biggio}. SaloMonte Carlo events are then generated in MadGraph5\_aMC@NLO \cite{Alwall:2011uj}. Bosonic decays are handled through Pythia 8, which is also in charge of hadronization \cite{Sjostrand:2007gs}. At the analysis level, we apply weights to correct for mismodeling of pile-up and \MET resolution.
 
-The production cross sections were calculated with NLO + NLL accuracy using the CTEQ6.6 and MSTW2008nlo90cl parton distribution functions (PDFs) \cite{Fuks:2012qx,Fuks:2013vua}. Flavor-democratic values of the mixing angles are taken ($V_e = V_\mu = V_\tau = 10^{-6}$). This has no direct consequence on the fermion production cross section, but affects the branching ratios. The branching fraction of a heavy fermion to a lepton of flavor $\ell = e, \mu, \tau$ is proportional to $v_{\ell N} = \frac{V_\ell}{\sqrt{|V_e|^2 + |V_\mu|^2 + |V_\tau|^2}}$. Therefore, the flavor-democratic scenario gives $v_{\ell N} = \frac{1}{\sqrt{3}}$. The branching ratios from the pair-produced fermions to the bosonic level of the most relevant decay modes are given in Fig.~\ref{fig:SeesawBR}.
+The production cross sections were calculated with NLO + NLL accuracy using the CTEQ6.6 and MSTW2008nlo90cl parton distribution functions (PDFs) \cite{Fuks:2012qx,Fuks:2013vua}. Flavor-democratic values of the mixing angles are taken ($V_e = V_\mu = V_\tau = 10^{-6}$). This has no direct consequence on the fermion production cross section, but affects the branching ratios. The branching fraction of a heavy fermion to a lepton of flavor $\ell = e, \mu, \tau$ is proportional to $v_{\ell N} = \frac{V_\ell}{\sqrt{|V_e|^2 + |V_\mu|^2 + |V_\tau|^2}}$. The branching ratios from the pair-produced fermions to the bosonic level of the most relevant decay modes are given in Fig.~\ref{fig:SeesawBR}.
 
 \begin{figure}
 \begin{center}

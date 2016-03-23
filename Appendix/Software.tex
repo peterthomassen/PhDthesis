@@ -27,6 +27,8 @@ The categorization of data, background, and signal events into signal and contro
 All of EventAnalyzer's actions are configured through a configuration file. The EventAnalyzer engine itself is agnostic of the specific type of physics that is being investigated, but it understands concepts such as particle collections, momentum vectors, spatial distance, or invariant mass. The configuration file is used to specify which particles are to be related in which ways, and allows to declare variables for storage that are of interest on the analysis level such as the scalar sum of lepton transverse momenta, $L_\textrm{T}$. It also allows to specify the output format as well as skimming criteria in order to save on storage and processing time.
 
 \section{AnalysisPresenter}
+\label{app:Software/AnalysisPresenter}
+
 \subsection{Scope and Design Principles}
 Once all data, background, and signal samples have been made available in AnalysisTree format, AnalysisPresenter is used to categorize events, apply event weights (such as pile-up, \pt, or $n_\textrm{jets}$ corrections), estimate the data-driven fake backgrounds by applying fake rates (including any parameterizations that may have been defined) to the seed samples (see Sec.~\ref{sec:bkg_fakeLight}), and scale MC backgrounds and signal to the data luminosity.
 

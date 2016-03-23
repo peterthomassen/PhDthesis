@@ -45,7 +45,7 @@ The observations are generally consistent with the SM expectations, with the pos
 \end{center}
 \end{figure}
 
-The $p$-value for the observation in the aggregated twenty $L_\textrm{T} + \MET$ bins for the four categories shown in Fig.~\ref{fig:Results}, assuming SM physics only, is 0.93. This overall consistency with the SM expectation conveys the message that the apparent excess of observed events in the Fig.~\ref{fig:Results/a} is either a statistical artifact or a discrepancy that can be addressed only with additional data.
+The $p$-value for the observation in the aggregated 20 $L_\textrm{T} + \MET$ bins for the four categories shown in Fig.~\ref{fig:Results}, assuming SM physics only, is 0.93. This overall consistency with the SM expectation conveys the message that the excess of observed events in the Fig.~\ref{fig:Results/a} is either a statistical artifact or a discrepancy that can be addressed only with additional data.
 
 \section{Interpretation for the Seesaw Model}
 \label{sec:Interpretation}
@@ -138,7 +138,7 @@ We derive a rough estimate of the $r$-values for the $m_\Sigma = 220\GeV$ mass p
 \end{itemize}
 These are the production and decay modes amongst the 27 combinations described in Sec.~\ref{sec:Theory/SeesawPhenomenology} that have the highest branching ratios to trilepton final states. Note that in the first three cases, we sum over the heavy fermion charges, so that the above list covers seven of the 27 processes.
 
-We first estimate the expected number of decays from each of these processes, based on which we calculate how many of these events we expect to reconstruct and select in our analysis. We then compute back-of-the-envelope limits for the sum of all trilepton channels.
+We first estimate the expected number of decays from each of these processes, based on which we calculate how many of these events we expect to reconstruct and select in our analysis. We then compute back-of-the-envelope limits for a simplified search channel with exactly three light leptons\footnote{We apply an AIC veto to reject events with an OSSF pair below \Z when the trilepton invariant mass is on \Z (see Sec.~\ref{sec:bkg_fakeLight/photons}).}.
 
 To calculate the expected number of decays to the bosonic level from the most significant processes, we compute the product of the cross section and branching ratio for each process and then multiply by the luminosity (\fullLumi) as shown in Table~\ref{tab:BackOfEnvelope/1}.
 
@@ -156,7 +156,7 @@ $(\Sigma^+, \Sigma^-) \to (\Z \ell^+, \Z \ell^-)$             & 49              
 \end{tabular}
 \end{table}
 
-To obtain the expected number of reconstructed signal events, the number of expected decays then needs to be multiplied by the branching fractions from the bosonic to the leptonic level. We use $\textrm{BR}(\PW \to e \text{ or } \mu) = 23\,\%$, $\textrm{BR}(\Z \to e \text{ or } \mu) = 16\,\%$, as well as $\textrm{BR}(\ell\to e \text{ or } \mu) = 72\,\%$ to take leptonic $\tau$ decays into account. Whenever a \PW\ boson is present, it has a much higher leptonic branching ratio than the Higgs or \Z bosons which may also be present. Furthermore, there are two prompt leptons from the heavy fermion decay. In the presence of a \PW boson, we therefore ignore any Higgs and \Z bosons for simplicity. The electron and muon reconstruction efficiency is taken at $\epsilon_\textrm{lep} = 83\,\%$. Table~\ref{tab:BackOfEnvelope/2} shows the event yields with these branching ratios and efficiencies taken into account. As can be seen in the table, a total of about 74 signal events is expected. 
+To obtain the expected number of reconstructed signal events, the number of expected decays then needs to be multiplied by the branching fractions from the bosonic to the leptonic level. We use $\textrm{BR}(\PW \to e \text{ or } \mu) = 23\,\%$, $\textrm{BR}(\Z \to e \text{ or } \mu) = 16\,\%$, as well as $\textrm{BR}(\ell\to e \text{ or } \mu) = 72\,\%$ to take leptonic $\tau$ decays into account. Whenever a \PW\ boson is present, it has a much higher leptonic branching ratio than the Higgs or \Z bosons which may also be present. Furthermore, there are two prompt leptons from the heavy fermion decay. In the presence of a \PW\ boson, we therefore ignore any Higgs and \Z bosons for simplicity. The electron and muon reconstruction efficiency is taken at $\epsilon_\textrm{lep} = 83\,\%$. Table~\ref{tab:BackOfEnvelope/2} shows the event yields with these branching ratios and efficiencies taken into account. As can be seen in the table, a total of about 74 signal events is expected. 
 
 \begin{table}
 \centering
@@ -174,7 +174,7 @@ Sum               & 128.8                & 73.7              & 74.7 \\
 \end{tabular}
 \end{table}
 
-We now consider the total background for three light leptons, only applying our lepton \pt thresholds (see Sec.~\ref{sec:Selection}) and an AIC veto, rejecting events with an OSSF pair below \Z if the trilepton invariant mass is on \Z. We find about 2000 events, based on which we can set a 95\,\% C.\,L. limit of about $3 \cdot \sqrt{2000} \approx 134$ events. Relating this to the expected signal, we obtain $r = \frac{74}{134} = 0.55$.
+We now consider the total background for three light leptons, only applying the lepton \pt thresholds (see Sec.~\ref{sec:Selection}) and the AIC veto. We find about 2000 events, based on which we can set a 95\,\% C.\,L. limit of about $3 \cdot \sqrt{2000} \approx 134$ events. Relating this to the expected signal yields $r = \frac{74}{134} = 0.55$.
 
 This number is larger by a factor of 1.9 than our main result at 220\GeV, indicating that our estimate has less sensitivity. The reason for this is that we did not use any kinematic binning to separate the signal from the background. Thus, the limit is worse, as expected, but not vastly off.
 
@@ -192,7 +192,7 @@ While this exclusion plot visually differs little from the main result (Fig.~\re
 \end{figure}
 
 \subsection{Comparison to Run-I Results}
-We show that the sensitivity of our current analysis is plausible, given the improvements that were made in comparison to the Run I analysis \cite{CMS-PAS-EXO-14-001}. To this end, we compute expected limits starting from a mock-up analysis setup that is very similar to the Run I analysis. As we then add various improvements, we arrive at the limit shown in Section~\ref{sec:Interpretation}. The investigations are done using the signal mass point with $m_\Sigma = 340\GeV$\footnote{This was the highest mass point in the Run I analysis \cite{CMS-PAS-EXO-14-001}.} and described in the following; a summary is presented in Table~\ref{tab:improvements}.
+We show that the sensitivity of our current analysis is plausible, given the improvements that were made in comparison to the Run I analysis \cite{CMS-PAS-EXO-14-001}. To this end, we compute expected limits starting from a mock-up analysis setup that is very similar to the Run I analysis. As we then add various improvements, we arrive at the limit shown in Section~\ref{sec:Interpretation}. The investigations are done using the highest signal mass point considered in the Run I analysis ($m_\Sigma = 340\GeV$) and described in the following; a summary is presented in Table~\ref{tab:improvements}.
 
 We extract the Run I expected $r$-value from Figure 2 in \cite{CMS-PAS-EXO-14-001}. We find $\frac{\sigma_\textrm{experimental} \cdot \textrm{BR}}{\sigma_\textrm{theory} \cdot \textrm{BR}} = \frac{14\,\textrm{fb}}{4.3\,\textrm{fb}} = 3.26$. To relate this 8\TeV number to the current 13\TeV dataset with 2.3\fbinv, we divide the $r$-value by the cross-section ratio $\frac{\sigma(13\TeV)}{\sigma(8\TeV)} = 3.10$ and multiply by a correction factor for the different luminosities, $\sqrt{19.5/2.3}$. We thus find that the Run I analysis sensitivity corresponds to an expected r-value of $r_\textrm{exp} = 3.06$ at 13\TeV.
 

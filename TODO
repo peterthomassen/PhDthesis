@@ -1,3 +1,30 @@
-- fixme labels
-- photon systematic in table
+p43 Fig. 6.2
+p58 Fig. 7.6?
+p62 Fig. 7.8
+p63 Fig. 7.9
+p64 Fig. 7.10
+p65 Fig. 7.11
+p65 Fig. 7.12?
+
+fakePresentationBundle
+Z_elFake_MINELECTRONPT
+makeNicePlot(assembler->project("MINELECTRONPT", true)->plot(false), "min(p_{T}^{el})", "GeV", "")->SaveAs("../nicePlots/Z_elFake_MINELECTRONPT.pdf");
+Z_muFake_MINMUONPT
+makeNicePlot(assembler->project("MINMUONPT", true)->plot(false), "min(p_{T}^{mu})", "GeV", "")->SaveAs("../nicePlots/Z_elFake_MINMUONPT.pdf");
+Z_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_MOSSF.pdf");
+Z_noAIC_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_noAIC_MOSSF.pdf");
+Z_1el2mu_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_1el2mu_MOSSF.pdf");
+Z_3el_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_3el_MOSSF.pdf");
+Z_3mu_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_3mu_MOSSF.pdf");
+Z_2el1mu_MOSSF
+makeNicePlot(assembler->project("MOSSF", true)->plot(false), "OSSF pair mass", "GeV", "")->SaveAs("../nicePlots/Z_2el1mu_MOSSF.pdf");
+Z_HT
+makeNicePlot(assembler->project("HT", true)->plot(true), "HT", "GeV", "")->SaveAs("../nicePlots/Z_HT.pdf");
+
+- querformat tables
 

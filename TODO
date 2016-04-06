@@ -1,2 +1,2 @@
-- landscape pages: 33, 70, 74, 82
-
+landscape pages: 33, 70, 74, 82
+$ pdftk thesis.pdf rotate 33east 70east 74east 82east output out.pdf
